@@ -1,0 +1,1 @@
+# mosaico VRT/COG         ← vem de A/G

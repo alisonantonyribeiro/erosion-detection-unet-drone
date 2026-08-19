@@ -1,0 +1,1 @@
+# inferência (1 tile e lote) ← vem de C/F

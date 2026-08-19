@@ -1,0 +1,1 @@
+# cria o app FastAPI, registra routers (≈ @SpringBootApplication)

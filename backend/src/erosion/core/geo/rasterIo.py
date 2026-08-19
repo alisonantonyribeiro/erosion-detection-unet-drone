@@ -1,0 +1,1 @@
+# ler/escrever GeoTIFF, preservar CRS/transform

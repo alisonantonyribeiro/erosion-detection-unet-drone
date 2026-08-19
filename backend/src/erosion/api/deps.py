@@ -1,0 +1,1 @@
+# injeção de dependência (Depends → ≈ @Autowired)

@@ -1,0 +1,1 @@
+# cálculo de áreas (ha), estatísticas

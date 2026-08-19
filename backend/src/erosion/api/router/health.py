@@ -1,0 +1,1 @@
+# GET /health (GDAL, GPU, modelo carregado)
