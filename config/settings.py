@@ -1,0 +1,1 @@
+# Pydantic-Settings: lê .env + YAML (≈ @Configuration)

@@ -1,0 +1,1 @@
+# índices contra valores conhecidos

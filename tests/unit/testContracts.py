@@ -1,0 +1,1 @@
+# ordem das bandas treino == inferência

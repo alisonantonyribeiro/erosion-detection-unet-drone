@@ -1,0 +1,1 @@
+# corte em tiles ← vem do script A 

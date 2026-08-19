@@ -1,0 +1,1 @@
+# filesystem no MVP → S3/MinIO depois

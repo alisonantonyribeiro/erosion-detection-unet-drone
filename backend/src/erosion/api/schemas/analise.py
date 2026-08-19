@@ -1,0 +1,1 @@
+# AnaliseRequest, AnaliseResponse, StatusResponse

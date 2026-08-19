@@ -1,0 +1,1 @@
+# CLIs finas sobre o core (substituem A–G como comandos)

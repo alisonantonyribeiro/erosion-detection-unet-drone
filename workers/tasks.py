@@ -1,0 +1,1 @@
+# task "processar_analise" (chama services/core)

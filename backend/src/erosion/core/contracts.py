@@ -1,0 +1,1 @@
+# ⚠ ordem das bandas + validação em runtime (trava o P-02)

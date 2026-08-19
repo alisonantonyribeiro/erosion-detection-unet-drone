@@ -1,0 +1,1 @@
+# áreas por classe, métricas

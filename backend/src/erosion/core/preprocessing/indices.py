@@ -1,0 +1,1 @@
+# cálculo dos índices ← vem do script A
