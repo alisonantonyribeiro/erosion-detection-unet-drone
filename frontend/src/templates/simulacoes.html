@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/simulacoes.css">
+    <title>Simulações | GeoProcessamento</title>
+</head>
+<body>
+    <header>
+        <h2 class="title">GeoProcessamento</h2>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="diagnostico.html">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    <span>Novo diagnóstico</span>
+                </a>
+            </li>
+            <li>
+                <a href="historico.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Histórico</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="simulacoes.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Simulações</span>
+                </a>
+            </li>
+            <li>
+                <a href="relatorios.html">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Relatórios</span>
+                </a>
+            </li>
+            <li>
+                <a href="sobre.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="page">
+            <h1 class="page-title">Simulação de Recuperação - Área 2</h1>
+
+            <div class="simulation-compare">
+                <div class="sim-col">
+                    <h3>Situação Atual</h3>
+                    <div class="map-thumb map-thumb-medium"></div>
+                </div>
+                <div class="sim-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="sim-col">
+                    <h3>Cenário com Recuperação de APP (20m)</h3>
+                    <div class="map-thumb map-thumb-medium"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Comparativo</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <span class="dot dot-vegetacao"></span>
+                        <strong>Vegetação</strong>
+                        <p>Atual: 31,12 ha</p>
+                        <p>Simulado: 38,24 ha</p>
+                        <p class="delta delta-positive">(+7,12 ha)</p>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="dot dot-solo"></span>
+                        <strong>Solo Exposto</strong>
+                        <p>Atual: 10,21 ha</p>
+                        <p>Simulado: 5,12 ha</p>
+                        <p class="delta delta-positive">(-5,09 ha)</p>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="dot dot-risco"></span>
+                        <strong>Risco Erosivo</strong>
+                        <p>Atual: Alto (12%)</p>
+                        <p>Simulado: Médio (6%)</p>
+                        <p class="delta delta-positive">(-6%)</p>
+                    </div>
+                </div>
+
+                <div class="page-actions">
+                    <a class="btn btn-secondary" href="relatorios.html">Voltar</a>
+                    <button class="btn btn-primary" type="button">Salvar Simulação</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>
