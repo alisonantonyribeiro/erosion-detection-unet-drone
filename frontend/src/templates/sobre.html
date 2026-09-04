@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../static/css/base.css">
-    <link rel="stylesheet" href="../static/css/index.css">
-    <title>GeoProcessamento | IFPR</title>
+    <link rel="stylesheet" href="../static/css/sobre.css">
+    <title>Sobre | GeoProcessamento</title>
 </head>
 <body>
     <header>
@@ -18,7 +18,7 @@
 
     <nav class="navbar">
         <ul>
-            <li class="active">
+            <li>
                 <a href="index.html">
                     <i class="fa-solid fa-house"></i>
                     <span>Início</span>
@@ -48,7 +48,7 @@
                     <span>Relatórios</span>
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="sobre.html">
                     <i class="fa-solid fa-circle-info"></i>
                     <span>Sobre</span>
@@ -58,27 +58,14 @@
     </nav>
 
     <main>
-        <section class="hero-container">
-            <img class="hero" src="../static/imagens/hero.png" alt="Vista aérea de área com erosão do solo monitorada por análise geoespacial">
-            <div class="hero-overlay">
-                <h1 class="hero-title">Monitoramento inteligente de erosão do solo</h1>
-                <p class="hero-subtitle">Combine imagens de drone e inteligência artificial para identificar, medir e acompanhar áreas de erosão com precisão e agilidade.</p>
-            </div>
-        </section>
+        <div class="page">
+            <h1 class="page-title">Sobre o GeoProcessamento</h1>
 
-        <section class="about-container">
-            <h2 class="about-title">Sobre a plataforma</h2>
-            <p class="about-text">
-                O GeoProcessamento utiliza modelos de segmentação por inteligência artificial para detectar
-                automaticamente áreas de solo erodido a partir de imagens capturadas por drone. A ferramenta
-                organiza os diagnósticos gerados, permite comparar simulações ao longo do tempo e reúne tudo
-                em relatórios claros, ajudando na tomada de decisão sobre manejo e recuperação do solo.
-            </p>
-            <a href="diagnostico.html" class="btn btn-primary about-cta">
-                <i class="fa-solid fa-file-circle-plus"></i>
-                Novo diagnóstico
-            </a>
-        </section>
+            <div class="card about-card">
+                <p>O GeoProcessamento é uma plataforma inteligente para diagnóstico ambiental e apoio à decisão, voltada à identificação de áreas com risco de erosão a partir de imagens de drone processadas por um modelo de segmentação U-Net.</p>
+                <p>A ferramenta permite selecionar áreas de estudo, visualizar o uso e cobertura do solo, simular cenários de recuperação ambiental e gerar relatórios técnicos para apoiar o planejamento e a tomada de decisão.</p>
+            </div>
+        </div>
     </main>
 
     <footer></footer>
