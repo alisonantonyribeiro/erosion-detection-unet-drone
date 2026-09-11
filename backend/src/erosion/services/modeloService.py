@@ -1,6 +1,5 @@
 from sqlalchemy.orm import Session
 
-from erosion.core.model.predict import carregar_modelo
 from erosion.repositories.models import Modelo
 from erosion.storage.fileStore import caminho_modelo as resolver_caminho_modelo
 
@@ -22,4 +21,6 @@ def listar_modelos(db: Session) -> list[Modelo]:
 
 
 def carregar_modelo_keras(modelo: Modelo):
+    from erosion.core.model.predict import carregar_modelo  # import tardio: nao pesar rotas que so leem o BD
+
     return carregar_modelo(modelo.caminho_arquivo)

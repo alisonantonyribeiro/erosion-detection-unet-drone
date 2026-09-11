@@ -29,3 +29,4 @@ python-multipart>=0.0.9,<1
 celery>=5.3,<6
 redis>=5.0,<9
 pytest>=8.0,<10
+httpx2>=2.0,<3  # necessario para fastapi.testclient.TestClient
