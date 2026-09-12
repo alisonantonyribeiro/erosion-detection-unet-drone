@@ -1,2 +1,47 @@
 # config do experimento: ordem das bandas, TILE_SIZE,
 # NUM_CLASSES, pesos de classe, epochs...
+
+tile_size: 512
+stride: 256
+num_bands: 6
+num_classes: 5
+
+
+normalize_percentiles: [2, 98]
+
+index_order:  
+  - ndmi
+  - ndvi
+  - satvi
+  - bsi
+  - bi2
+  - bi
+
+classes:
+  - id: 0
+    nome: agricultura
+    valor_c_rusle: 0.200
+  - id: 1
+    nome: erosao
+    valor_c_rusle: 0.800
+  - id: 2
+    nome: agua
+    valor_c_rusle: 0.000
+  - id: 3
+    nome: vegetacao
+    valor_c_rusle: 0.001
+  - id: 4
+    nome: construcao
+    valor_c_rusle: 0.001
+
+class_weights:
+  0: 3.0
+  1: 6.0
+  2: 1.0
+  3: 6.0
+  4: 5.0
+
+training:
+  epochs: 50
+  batch_size: 4
+

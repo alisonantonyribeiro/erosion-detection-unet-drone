@@ -15,3 +15,18 @@ scikit-learn==1.2.0
 # Utilitários
 tqdm==4.65.0
 glob2==0.7
+
+pydantic==2.*
+pydantic-settings==2.*
+PyYAML==6.*
+
+# Backend (API, worker, banco, testes)
+SQLAlchemy>=2.0,<3
+alembic>=1.13,<2
+fastapi>=0.110,<1
+uvicorn[standard]>=0.29,<1
+python-multipart>=0.0.9,<1
+celery>=5.3,<6
+redis>=5.0,<9
+pytest>=8.0,<10
+httpx2>=2.0,<3  # necessario para fastapi.testclient.TestClient
