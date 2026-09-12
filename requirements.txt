@@ -5,8 +5,9 @@
 tensorflow==2.12.0
 
 # Processamento de dados geoespaciais
+# GDAL (bindings osgeo) removido: nada no projeto importa osgeo/gdal
+# diretamente -- rasterio ja traz o GDAL dele embutido no wheel do Windows.
 rasterio==1.3.0
-GDAL==3.6.0
 numpy==1.24.0
 
 # Machine Learning
