@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/historico.css">
+    <title>Histórico | GeoProcessamento</title>
+</head>
+<body>
+    <header>
+        <h2 class="title">GeoProcessamento</h2>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="diagnostico.html">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    <span>Novo diagnóstico</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="historico.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Histórico</span>
+                </a>
+            </li>
+            <li>
+                <a href="simulacoes.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Simulações</span>
+                </a>
+            </li>
+            <li>
+                <a href="relatorios.html">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Relatórios</span>
+                </a>
+            </li>
+            <li>
+                <a href="sobre.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="page">
+            <h1 class="page-title">Histórico de Diagnósticos</h1>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Área</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20/06/2025</td>
+                        <td>Área 2 - Rio Claro</td>
+                        <td><span class="status-badge">Concluído</span></td>
+                        <td class="actions-cell">
+                            <a href="relatorios.html" title="Visualizar"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#" title="Baixar"><i class="fa-solid fa-download"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>18/06/2025</td>
+                        <td>Área 1 - Rio Azul</td>
+                        <td><span class="status-badge">Concluído</span></td>
+                        <td class="actions-cell">
+                            <a href="relatorios.html" title="Visualizar"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#" title="Baixar"><i class="fa-solid fa-download"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>15/06/2025</td>
+                        <td>Área 3 - Rio Verde</td>
+                        <td><span class="status-badge">Concluído</span></td>
+                        <td class="actions-cell">
+                            <a href="relatorios.html" title="Visualizar"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#" title="Baixar"><i class="fa-solid fa-download"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10/06/2025</td>
+                        <td>Área 4 - Rio Bom</td>
+                        <td><span class="status-badge">Concluído</span></td>
+                        <td class="actions-cell">
+                            <a href="relatorios.html" title="Visualizar"><i class="fa-regular fa-eye"></i></a>
+                            <a href="#" title="Baixar"><i class="fa-solid fa-download"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="page-actions page-actions-end">
+                <a class="btn btn-primary" href="formulario.html">Novo Diagnóstico</a>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>

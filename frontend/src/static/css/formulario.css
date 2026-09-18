@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%;
+    max-width: 700px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-sizing: border-box;
+    border: 1px solid #e2e6eb;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+    flex-direction: column;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 16px 0 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b1b2b;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+    color: #0b1b2b;
+    background: #f8fafc;
+    border: 1px solid #cfd6de;
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input {
+    height: 42px;
+    padding: 0 12px;
+}
+
+form textarea {
+    min-height: 120px;
+    padding: 12px;
+    resize: vertical;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #8a96a3;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #0b1b2b;
+    box-shadow: 0 0 0 3px rgba(11, 27, 43, 0.08);
+    background: #ffffff;
+}
+
+.localizacao {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.localizacao > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.localizacao label {
+    margin-top: 16px;
+}
+
+form input[type="file"] {
+    height: auto;
+    padding: 10px;
+    cursor: pointer;
+    background: #f8fafc;
+}
+
+form input[type="file"]::file-selector-button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #0b1b2b;
+    color: white;
+    cursor: pointer;
+}
+
+.btn {
+    margin: 20px 0;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   JANELA
+========================= */
+
+.modal {
+    width: 100%;
+    max-width: 650px;
+    max-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+
+    transform: translateY(20px) scale(0.98);
+
+    transition: transform 0.2s ease;
+}
+
+.modal-overlay.active .modal {
+    transform: translateY(0) scale(1);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 24px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h2 {
+    margin: 0;
+
+    font-size: 20px;
+    color: #0b1b2b;
+}
+
+.modal-fechar {
+    border: none;
+    background: transparent;
+
+    font-size: 28px;
+    line-height: 1;
+
+    color: #6b7280;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.modal-fechar:hover {
+    color: #0b1b2b;
+}
+
+.modal-body {
+    padding: 24px;
+
+    overflow-y: auto;
+}
+
+.preview-imagem {
+    width: 100%;
+    height: 220px;
+
+    margin-bottom: 24px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: #f3f4f6;
+}
+
+.preview-imagem img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.dados-confirmacao {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.dado {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #eef0f2;
+}
+
+.dado span {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #6b7280;
+}
+
+.dado strong {
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #111827;
+
+    word-break: break-word;
+}
+
+.dados-localizacao {
+    display: flex;
+    gap: 20px;
+}
+
+.dados-localizacao .dado {
+    flex: 1;
+}
+
+.dado.descricao p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #374151;
+
+    white-space: pre-wrap;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    padding: 18px 24px;
+
+    border-top: 1px solid #e5e7eb;
+
+    background: #fafafa;
+}
+
+
+.btn {
+    height: 42px;
+
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: #0b1b2b;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #172d42;
+}
+
+.btn-secondary {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background: #d8dbe0;
+}
+

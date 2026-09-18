@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.hero {
+    width: 100%;
+    max-width: 520px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.logo-geo {
+    color: var(--text-dark);
+}
+
+.logo-accent {
+    color: var(--green);
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.illustration {
+    margin: 28px 0;
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 4px 14px rgba(11, 27, 43, 0.06);
+}
+
+.illustration img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.actions .btn {
+    width: 100%;
+}

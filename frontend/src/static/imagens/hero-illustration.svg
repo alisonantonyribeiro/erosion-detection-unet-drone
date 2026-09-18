@@ -1,0 +1,57 @@
+<svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração de paisagem com montanhas, árvores e rio">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eaf4f4"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="260" fill="url(#sky)"/>
+
+  <!-- montanhas ao fundo -->
+  <polygon points="0,200 90,110 150,180 220,90 300,200" fill="#a9c6d8"/>
+  <polygon points="260,200 340,120 410,190 480,105 600,200" fill="#bcd3e0"/>
+
+  <!-- colinas verdes -->
+  <path d="M0,210 C120,150 200,230 320,190 C420,160 500,220 600,190 L600,260 L0,260 Z" fill="#6fae63"/>
+  <path d="M0,225 C140,190 260,240 380,205 C460,182 540,220 600,205 L600,260 L0,260 Z" fill="#8bc07e"/>
+
+  <!-- rio -->
+  <path d="M60,260 C140,220 160,190 130,160 C100,130 150,110 210,120 C270,130 250,165 300,180 C360,198 380,230 430,240 C470,248 520,238 560,260 Z" fill="#5fa8d3" opacity="0.85"/>
+
+  <!-- arvore 1 -->
+  <g transform="translate(120,140)">
+    <rect x="-4" y="40" width="8" height="30" fill="#7a5230"/>
+    <circle cx="0" cy="20" r="26" fill="#3f8f4f"/>
+    <circle cx="-20" cy="35" r="18" fill="#4ea15d"/>
+    <circle cx="20" cy="35" r="18" fill="#4ea15d"/>
+  </g>
+
+  <!-- arvore 2 (pinheiro) -->
+  <g transform="translate(430,120)">
+    <rect x="-4" y="55" width="8" height="20" fill="#7a5230"/>
+    <polygon points="0,0 26,40 -26,40" fill="#2f7d4f"/>
+    <polygon points="0,18 30,60 -30,60" fill="#3f8f4f"/>
+  </g>
+
+  <!-- arvore 3 (pinheiro pequeno) -->
+  <g transform="translate(470,140)">
+    <rect x="-3" y="42" width="6" height="16" fill="#7a5230"/>
+    <polygon points="0,0 20,32 -20,32" fill="#2f7d4f"/>
+    <polygon points="0,14 24,48 -24,48" fill="#3f8f4f"/>
+  </g>
+
+  <!-- arvore 4 -->
+  <g transform="translate(60,160)">
+    <rect x="-3" y="30" width="6" height="22" fill="#7a5230"/>
+    <circle cx="0" cy="14" r="18" fill="#4ea15d"/>
+  </g>
+
+  <!-- nuvens -->
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="90" cy="45" rx="28" ry="12"/>
+    <ellipse cx="115" cy="40" rx="22" ry="10"/>
+    <ellipse cx="480" cy="55" rx="24" ry="10"/>
+    <ellipse cx="505" cy="50" rx="18" ry="9"/>
+  </g>
+</svg>

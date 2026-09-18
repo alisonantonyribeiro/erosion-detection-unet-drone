@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.about-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.about-card p:last-child {
+    margin-bottom: 0;
+}

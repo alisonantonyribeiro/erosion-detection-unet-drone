@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/formulario.css">
+    <title>Novo Diagnóstico | GeoProcessamento</title>
+</head>
+
+<body>
+    <header>
+        <h2 class="title">GeoProcessamento</h2>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li >
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="diagnostico.html">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    <span>Novo diagnóstico</span>
+                </a>
+            </li>
+            <li>
+                <a href="historico.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Histórico</span>
+                </a>
+            </li>
+            <li>
+                <a href="simulacoes.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Simulações</span>
+                </a>
+            </li>
+            <li>
+                <a href="relatorios.html">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Relatórios</span>
+                </a>
+            </li>
+            <li>
+                <a href="sobre.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form id="localidadeForm" action="#" method="POST" 
+        enctype="multipart/form-data">
+            <div>
+                <label for="pais">País</label>
+                <input type="text" id="pais" placeholder="Digite o país">
+
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" placeholder="Digite o estado">
+
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" placeholder="Digite a didade">
+
+                <label for="area">Area Geográfica</label>
+                <input type="text" id="area" placeholder="Digite o Nome da area">
+
+                <label for="imagen">Imagem</label>
+                <input type="file" id="imagem" accept="image/*">
+
+
+                <div class="localizacao">
+                    <div class="">
+                        <label for="latitude">Latitude</label>
+                        <input type="number" class="cordernadas" id="latitude">
+
+                    </div>
+
+                    <div class="">
+                        <label for="longitude">Longitude</label>
+                        <input type="number" id="longitude" class="cordernadas">
+                    </div>
+                </div>
+
+                <label for="descricao">Descrição do localidade</label>
+                <textarea id="descricao"></textarea>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Confirmar dados</button>
+
+        </form>
+
+        <div class="modal-overlay" id="modalConfirmacao">
+
+            <div class="modal">
+
+                <div class="modal-header">
+                    <h2>Confirmar dados</h2>
+
+                    <button type="button" class="modal-fechar" id="fecharModal">
+                        &times;
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="preview-imagem">
+                        <img id="previewImagem" src="" alt="Imagem selecionada">
+                    </div>
+
+                    <div class="dados-confirmacao">
+
+                        <div class="dado">
+                            <span>País</span>
+                            <strong id="confirmPais"></strong>
+                        </div>
+
+                        <div class="dado">
+                            <span>Estado</span>
+                            <strong id="confirmEstado"></strong>
+                        </div>
+
+                        <div class="dado">
+                            <span>Cidade</span>
+                            <strong id="confirmCidade"></strong>
+                        </div>
+
+                        <div class="dado">
+                            <span>Área Geográfica</span>
+                            <strong id="confirmArea"></strong>
+                        </div>
+
+                        <div class="dados-localizacao">
+
+                            <div class="dado">
+                                <span>Latitude</span>
+                                <strong id="confirmLatitude"></strong>
+                            </div>
+
+                            <div class="dado">
+                                <span>Longitude</span>
+                                <strong id="confirmLongitude"></strong>
+                            </div>
+
+                        </div>
+
+                        <div class="dado descricao">
+                            <span>Descrição</span>
+                            <p id="confirmDescricao"></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" id="cancelarModal">
+                        Voltar
+                    </button>
+
+                    <button type="button" class="btn btn-primary" id="enviarFormulario">
+                        Enviar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../static/js/formulario.js"></script>
+</body>
+</html>

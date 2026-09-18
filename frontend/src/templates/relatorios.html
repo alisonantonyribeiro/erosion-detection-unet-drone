@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/relatorios.css">
+    <title>Relatórios | GeoProcessamento</title>
+</head>
+<body>
+    <header id="top">
+        <h2 class="title">GeoProcessamento</h2>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="diagnostico.html">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    <span>Novo diagnóstico</span>
+                </a>
+            </li>
+            <li>
+                <a href="historico.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Histórico</span>
+                </a>
+            </li>
+            <li>
+                <a href="simulacoes.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Simulações</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="relatorios.html">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Relatórios</span>
+                </a>
+            </li>
+            <li>
+                <a href="sobre.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Sobre</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="page">
+            <h1 class="page-title">Resultados - Área 2</h1>
+
+            <div class="results-layout">
+                <div class="map-panel">
+                    <div class="map-thumb map-thumb-large"></div>
+                </div>
+
+                <div class="results-side">
+                    <div class="card legend-card">
+                        <h3>Classes</h3>
+                        <ul class="legend-list">
+                            <li><span class="dot dot-vegetacao"></span>Vegetação</li>
+                            <li><span class="dot dot-solo"></span>Solo Exposto</li>
+                            <li><span class="dot dot-agricultura"></span>Agricultura</li>
+                            <li><span class="dot dot-urbana"></span>Área Urbana</li>
+                            <li><span class="dot dot-agua"></span>Água</li>
+                        </ul>
+                    </div>
+
+                    <div class="card indicators-card">
+                        <h3>Indicadores</h3>
+                        <ul class="indicators-list">
+                            <li><span>Área Total</span><strong>58,24 ha</strong></li>
+                            <li><span>Vegetação</span><strong>31,12 ha (53,3%)</strong></li>
+                            <li><span>Solo Exposto</span><strong>10,21 ha (17,2%)</strong></li>
+                            <li><span>Agricultura</span><strong>14,35 ha (24,2%)</strong></li>
+                            <li><span>Área Urbana</span><strong>2,10 ha (3,5%)</strong></li>
+                            <li><span>Água</span><strong>1,46 ha (2,8%)</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-actions">
+                <a class="btn btn-secondary" href="carregar-projeto.html">Voltar</a>
+                <a class="btn btn-secondary" href="simulacoes.html">Simular Cenário</a>
+                <a class="btn btn-primary" href="#relatorio-gerado">Gerar Relatório</a>
+            </div>
+        </div>
+
+        <div class="page report-page" id="relatorio-gerado">
+            <div class="card report-card">
+                <h2>RELATÓRIO DE DIAGNÓSTICO AMBIENTAL</h2>
+                <p><strong>Área:</strong> Bacia do Rio Claro (Área 2)</p>
+                <p><strong>Data:</strong> 20/06/2025</p>
+
+                <h3>Resumo</h3>
+                <p>Este relatório apresenta os resultados do diagnóstico ambiental realizado com o sistema GeoProcessamento.</p>
+
+                <h3>Principais Resultados</h3>
+                <ul>
+                    <li>Área total analisada: 58,24 ha</li>
+                    <li>Vegetação: 31,12 ha (53,3%)</li>
+                    <li>Solo exposto: 10,21 ha (17,2%)</li>
+                    <li>Agricultura: 14,35 ha (24,2%)</li>
+                    <li>Alto risco erosivo: 7,12 ha (12%)</li>
+                </ul>
+
+                <h3>Recomendações</h3>
+                <ul>
+                    <li>Recuperação da APP nas áreas de maior declividade.</li>
+                    <li>Implantação de práticas conservacionistas.</li>
+                    <li>Monitoramento contínuo da cobertura vegetal.</li>
+                </ul>
+
+                <div class="page-actions">
+                    <a class="btn btn-secondary" href="#top">Voltar</a>
+                    <button class="btn btn-primary" type="button">Exportar PDF</button>
+                    <button class="btn btn-secondary" type="button">Exportar Imagem</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>
