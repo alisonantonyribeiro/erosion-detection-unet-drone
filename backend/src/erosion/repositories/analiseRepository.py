@@ -17,8 +17,15 @@ def buscar_por_id(db: Session, analise_id: int) -> Analise | None:
     return db.get(Analise, analise_id)
 
 
-def listar_todas(db: Session) -> list[Analise]:
-    return db.query(Analise).order_by(Analise.criado_em.desc()).all()
+def listar_todas(
+    db: Session, microbacia_id: int | None = None, status: StatusAnalise | None = None
+) -> list[Analise]:
+    query = db.query(Analise)
+    if microbacia_id is not None:
+        query = query.filter(Analise.microbacia_id == microbacia_id)
+    if status is not None:
+        query = query.filter(Analise.status == status)
+    return query.order_by(Analise.criado_em.desc(), Analise.id.desc()).all()
 
 
 def atualizar_status(
