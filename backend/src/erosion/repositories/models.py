@@ -24,6 +24,13 @@ class Microbacia(Base):
     id = Column(Integer, primary_key=True)
     nome = Column(String, nullable=False)
     area_ha = Column(Float)
+    pais = Column(String, nullable=True)
+    estado = Column(String, nullable=True)
+    cidade = Column(String, nullable=True)
+    latitude = Column(Float, nullable=True)
+    longitude = Column(Float, nullable=True)
+    descricao = Column(String, nullable=True)
+    criado_em = Column(DateTime(timezone=True), default=_agora)
 
     analises = relationship("Analise", back_populates="microbacia")
 
