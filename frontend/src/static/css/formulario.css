@@ -238,6 +238,45 @@ form input[type="file"]::file-selector-button {
     object-fit: cover;
 }
 
+.preview-nome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    padding: 0 16px;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+
+    word-break: break-all;
+}
+
+.preview-nome[hidden] {
+    display: none;
+}
+
+.modal-erro {
+    margin-top: 16px;
+    padding: 12px 14px;
+
+    border-radius: 8px;
+    background: #fdecea;
+
+    font-size: 14px;
+    color: #a12b20;
+}
+
+.modal-erro[hidden] {
+    display: none;
+}
+
+.modal-footer .btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
 .dados-confirmacao {
     display: flex;
     flex-direction: column;
