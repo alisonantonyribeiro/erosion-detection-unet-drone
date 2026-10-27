@@ -38,6 +38,30 @@
     font-weight: 600;
 }
 
+.status-pendente {
+    background-color: #eef1f4;
+    color: var(--text-muted);
+}
+
+.status-processando {
+    background-color: #fdf3dc;
+    color: #8a5a00;
+}
+
+.status-erro {
+    background-color: #fdecea;
+    color: #a12b20;
+}
+
+.table-message {
+    text-align: center !important;
+    color: var(--text-muted);
+}
+
+.table-message.erro {
+    color: #a12b20;
+}
+
 .actions-cell {
     display: flex;
     gap: 16px;

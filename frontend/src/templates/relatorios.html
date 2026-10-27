@@ -54,12 +54,20 @@
                     <span>Sobre</span>
                 </a>
             </li>
+            <li>
+                <a href="teste.html">
+                    <i class="fa-solid fa-flask"></i>
+                    <span>Teste</span>
+                </a>
+            </li>
         </ul>
     </nav>
 
     <main>
         <div class="page">
-            <h1 class="page-title">Resultados - Área 2</h1>
+            <h1 class="page-title" id="tituloResultado">Resultados</h1>
+
+            <p class="result-message" id="mensagemResultado">Carregando análise...</p>
 
             <div class="results-layout">
                 <div class="map-panel">
@@ -69,25 +77,12 @@
                 <div class="results-side">
                     <div class="card legend-card">
                         <h3>Classes</h3>
-                        <ul class="legend-list">
-                            <li><span class="dot dot-vegetacao"></span>Vegetação</li>
-                            <li><span class="dot dot-solo"></span>Solo Exposto</li>
-                            <li><span class="dot dot-agricultura"></span>Agricultura</li>
-                            <li><span class="dot dot-urbana"></span>Área Urbana</li>
-                            <li><span class="dot dot-agua"></span>Água</li>
-                        </ul>
+                        <ul class="legend-list" id="listaClasses"></ul>
                     </div>
 
                     <div class="card indicators-card">
                         <h3>Indicadores</h3>
-                        <ul class="indicators-list">
-                            <li><span>Área Total</span><strong>58,24 ha</strong></li>
-                            <li><span>Vegetação</span><strong>31,12 ha (53,3%)</strong></li>
-                            <li><span>Solo Exposto</span><strong>10,21 ha (17,2%)</strong></li>
-                            <li><span>Agricultura</span><strong>14,35 ha (24,2%)</strong></li>
-                            <li><span>Área Urbana</span><strong>2,10 ha (3,5%)</strong></li>
-                            <li><span>Água</span><strong>1,46 ha (2,8%)</strong></li>
-                        </ul>
+                        <ul class="indicators-list" id="listaIndicadores"></ul>
                     </div>
                 </div>
             </div>
@@ -102,19 +97,15 @@
         <div class="page report-page" id="relatorio-gerado">
             <div class="card report-card">
                 <h2>RELATÓRIO DE DIAGNÓSTICO AMBIENTAL</h2>
-                <p><strong>Área:</strong> Bacia do Rio Claro (Área 2)</p>
-                <p><strong>Data:</strong> 20/06/2025</p>
+                <p><strong>Área:</strong> <span id="relatorioArea">-</span></p>
+                <p><strong>Data:</strong> <span id="relatorioData">-</span></p>
 
                 <h3>Resumo</h3>
                 <p>Este relatório apresenta os resultados do diagnóstico ambiental realizado com o sistema GeoProcessamento.</p>
 
                 <h3>Principais Resultados</h3>
-                <ul>
-                    <li>Área total analisada: 58,24 ha</li>
-                    <li>Vegetação: 31,12 ha (53,3%)</li>
-                    <li>Solo exposto: 10,21 ha (17,2%)</li>
-                    <li>Agricultura: 14,35 ha (24,2%)</li>
-                    <li>Alto risco erosivo: 7,12 ha (12%)</li>
+                <ul id="relatorioResultados">
+                    <li>Resultados indisponíveis.</li>
                 </ul>
 
                 <h3>Recomendações</h3>
@@ -134,5 +125,7 @@
     </main>
 
     <footer></footer>
+
+    <script type="module" src="../ts/pages/relatorios.ts"></script>
 </body>
 </html>
