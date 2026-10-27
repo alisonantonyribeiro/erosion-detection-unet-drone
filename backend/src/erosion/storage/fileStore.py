@@ -15,5 +15,11 @@ def caminho_analise(analise_id: int, *partes: str) -> Path:
     return caminho
 
 
+def caminho_upload(nome_arquivo: str) -> Path:
+    caminho = get_settings().data_dir / "uploads" / nome_arquivo
+    caminho.parent.mkdir(parents=True, exist_ok=True)
+    return caminho
+
+
 def caminho_modelo(nome_arquivo: str) -> Path:
     return get_settings().models_dir / nome_arquivo
