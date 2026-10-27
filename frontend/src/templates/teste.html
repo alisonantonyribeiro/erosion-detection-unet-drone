@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/teste.css">
+    <title>Teste da API | GeoProcessamento</title>
+</head>
+<body>
+    <header>
+        <h2 class="title">GeoProcessamento</h2>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="diagnostico.html">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    <span>Novo diagnóstico</span>
+                </a>
+            </li>
+            <li>
+                <a href="historico.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Histórico</span>
+                </a>
+            </li>
+            <li>
+                <a href="simulacoes.html">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Simulações</span>
+                </a>
+            </li>
+            <li>
+                <a href="relatorios.html">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Relatórios</span>
+                </a>
+            </li>
+            <li>
+                <a href="sobre.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Sobre</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="teste.html">
+                    <i class="fa-solid fa-flask"></i>
+                    <span>Teste</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="page page-teste">
+            <h1 class="page-title">Teste dos Endpoints</h1>
+
+            <div class="teste-toolbar">
+                <p>API: <code id="apiUrl"></code></p>
+                <button type="button" class="btn btn-primary" id="testarTodosGet">Rodar todos os GET</button>
+            </div>
+
+            <h2 class="teste-grupo">Sistema</h2>
+            <div class="teste-grid">
+                <form class="card teste-card" id="tHealth">
+                    <div class="teste-rota"><span class="metodo get">GET</span><code>/health</code></div>
+                    <p class="teste-descricao">Status da API, GDAL e GPU.</p>
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                    <pre class="resposta" hidden></pre>
+                </form>
+
+                <form class="card teste-card" id="tModelos">
+                    <div class="teste-rota"><span class="metodo get">GET</span><code>/modelos</code></div>
+                    <p class="teste-descricao">Modelos treinados cadastrados. Preenche o <code>modelo_id</code> do POST /analises.</p>
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                    <pre class="resposta" hidden></pre>
+                </form>
+            </div>
+
+            <h2 class="teste-grupo">Microbacias</h2>
+            <div class="teste-grid">
+                <form class="card teste-card" id="tMicrobaciasListar">
+                    <div class="teste-rota"><span class="metodo get">GET</span><code>/microbacias</code></div>
+                    <p class="teste-descricao">Lista todas as microbacias.</p>
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                    <pre class="resposta" hidden></pre>
+                </form>
+
+                <form class="card teste-card" id="tMicrobaciasBuscar">
+                    <div class="teste-rota"><span class="metodo get">GET</span><code>/microbacias/{id}</code></div>
+                    <label>id <input type="number" name="id" min="1" required></label>
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                    <pre class="resposta" hidden></pre>
+                </form>
+
+                <form class="card teste-card teste-card-larga" id="tMicrobaciasCriar">
+                    <div class="teste-rota"><span class="metodo post">POST</span><code>/microbacias</code></div>
+                    <label>Corpo (JSON)
+                        <textarea name="corpo" rows="8" spellcheck="false">{
+  "nome": "Nascentes do Arroio Fundo",
+  "area_ha": 59.24,
+  "pais": "Brasil",
+  "estado": "PR",
+  "cidade": "Marechal Cândido Rondon",
+  "latitude": -24.55,
+  "longitude": -54.05,
+  "descricao": "Microbacia de teste"
+}</textarea>
+                    </label>
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                    <pre class="resposta" hidden></pre>
+                </form>
+            </div>
+
+            <h2 class="teste-grupo">Imagens</h2>
+            <div class="teste-grid">
+                <form class="card teste-card teste-card-larga" id="tImagens">
+                    <div class="teste-rota"><span class="metodo post">POST</span><code>/imagens</code></div>
+                    <p class="teste-descricao">Upload multipart do ortomosaico (GeoTIFF, 4+ bandas). O <code>caminho_imagem</code> devolvido vai para o POST /analises.</p>
+                    <label>arquivo <input type="file" name="arquivo" accept=".tif,.tiff" required></label>
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                    <pre class="resposta" hidden></pre>
+                </form>
+            </div>
+
+            <h2 class="teste-grupo">Análises</h2>
+            <div class="teste-grid">
+                <form class="card teste-card" id="tAnalisesListar">
+                    <div class="teste-rota"><span class="metodo get">GET</span><code>/analises</code></div>
+                    <label>microbacia_id (opcional) <input type="number" name="microbacia_id" min="1"></label>
+                    <label>status (opcional)
+                        <select name="status">
+                            <option value="">(todos)</option>
+                            <option value="pendente">pendente</option>
+                            <option value="processando">processando</option>
+                            <option value="concluida">concluida</option>
+                            <option value="erro">erro</option>
+                        </select>
+                    </label>
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                    <pre class="resposta" hidden></pre>
+                </form>
+
+                <form class="card teste-card" id="tAnalisesCriar">
+                    <div class="teste-rota"><span class="metodo post">POST</span><code>/analises</code></div>
+                    <label>Corpo (JSON)
+                        <textarea name="corpo" rows="6" spellcheck="false">{
+  "microbacia_id": 1,
+  "modelo_id": 1,
+  "caminho_imagem": ""
+}</textarea>
+                    </label>
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                    <pre class="resposta" hidden></pre>
+                </form>
+
+                <form class="card teste-card" id="tAnalisesStatus">
+                    <div class="teste-rota"><span class="metodo get">GET</span><code>/analises/{id}/status</code></div>
+                    <label>id <input type="number" name="id" min="1" required></label>
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                    <pre class="resposta" hidden></pre>
+                </form>
+
+                <form class="card teste-card" id="tAnalisesResultado">
+                    <div class="teste-rota"><span class="metodo get">GET</span><code>/analises/{id}/resultado</code></div>
+                    <p class="teste-descricao">Responde 409 enquanto a análise não estiver concluída.</p>
+                    <label>id <input type="number" name="id" min="1" required></label>
+                    <button type="submit" class="btn btn-secondary">Enviar</button>
+                    <pre class="resposta" hidden></pre>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script type="module" src="../ts/pages/teste.ts"></script>
+</body>
+</html>
