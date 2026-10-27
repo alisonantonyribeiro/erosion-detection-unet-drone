@@ -54,6 +54,12 @@
                     <span>Sobre</span>
                 </a>
             </li>
+            <li>
+                <a href="teste.html">
+                    <i class="fa-solid fa-flask"></i>
+                    <span>Teste</span>
+                </a>
+            </li>
         </ul>
     </nav>
 
@@ -61,49 +67,16 @@
         <div class="page">
             <h1 class="page-title">Selecione a Área de Estudo</h1>
 
-            <div class="area-grid">
-                <a class="area-card" href="relatorios.html">
-                    <div class="area-thumb thumb-1"></div>
-                    <div class="area-info">
-                        <strong>Área 1</strong>
-                        <span>Bacia do Rio Azul</span>
-                    </div>
-                </a>
-                <a class="area-card" href="relatorios.html">
-                    <div class="area-thumb thumb-2"></div>
-                    <div class="area-info">
-                        <strong>Área 2</strong>
-                        <span>Bacia do Rio Claro</span>
-                    </div>
-                </a>
-                <a class="area-card" href="relatorios.html">
-                    <div class="area-thumb thumb-3"></div>
-                    <div class="area-info">
-                        <strong>Área 3</strong>
-                        <span>Bacia do Rio Verde</span>
-                    </div>
-                </a>
-                <a class="area-card" href="relatorios.html">
-                    <div class="area-thumb thumb-4"></div>
-                    <div class="area-info">
-                        <strong>Área 4</strong>
-                        <span>Bacia do Rio Bom</span>
-                    </div>
-                </a>
-                <a class="area-card" href="relatorios.html">
-                    <div class="area-thumb thumb-5"></div>
-                    <div class="area-info">
-                        <strong>Área 5</strong>
-                        <span>Bacia do Rio Sul</span>
-                    </div>
-                </a>
-                <div class="area-card area-card-add">
+            <p class="area-message" id="areaMensagem">Carregando áreas...</p>
+
+            <div class="area-grid" id="areaGrid">
+                <a class="area-card area-card-add" href="formulario.html" id="areaAdicionar">
                     <div class="area-add-icon">+</div>
                     <div class="area-info">
                         <strong>Adicionar Área</strong>
-                        <span>(Em breve)</span>
+                        <span>Novo diagnóstico</span>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="page-actions">
@@ -114,5 +87,7 @@
     </main>
 
     <footer></footer>
+
+    <script type="module" src="../ts/pages/carregar-projeto.ts"></script>
 </body>
 </html>

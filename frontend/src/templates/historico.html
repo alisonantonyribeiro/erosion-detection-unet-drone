@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="../static/css/historico.css">
     <title>Histórico | GeoProcessamento</title>
 </head>
+
 <body>
     <header>
         <h2 class="title">GeoProcessamento</h2>
@@ -54,6 +56,12 @@
                     <span>Sobre</span>
                 </a>
             </li>
+            <li>
+                <a href="teste.html">
+                    <i class="fa-solid fa-flask"></i>
+                    <span>Teste</span>
+                </a>
+            </li>
         </ul>
     </nav>
 
@@ -70,42 +78,9 @@
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tabelaAnalises">
                     <tr>
-                        <td>20/06/2025</td>
-                        <td>Área 2 - Rio Claro</td>
-                        <td><span class="status-badge">Concluído</span></td>
-                        <td class="actions-cell">
-                            <a href="relatorios.html" title="Visualizar"><i class="fa-regular fa-eye"></i></a>
-                            <a href="#" title="Baixar"><i class="fa-solid fa-download"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>18/06/2025</td>
-                        <td>Área 1 - Rio Azul</td>
-                        <td><span class="status-badge">Concluído</span></td>
-                        <td class="actions-cell">
-                            <a href="relatorios.html" title="Visualizar"><i class="fa-regular fa-eye"></i></a>
-                            <a href="#" title="Baixar"><i class="fa-solid fa-download"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>15/06/2025</td>
-                        <td>Área 3 - Rio Verde</td>
-                        <td><span class="status-badge">Concluído</span></td>
-                        <td class="actions-cell">
-                            <a href="relatorios.html" title="Visualizar"><i class="fa-regular fa-eye"></i></a>
-                            <a href="#" title="Baixar"><i class="fa-solid fa-download"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10/06/2025</td>
-                        <td>Área 4 - Rio Bom</td>
-                        <td><span class="status-badge">Concluído</span></td>
-                        <td class="actions-cell">
-                            <a href="relatorios.html" title="Visualizar"><i class="fa-regular fa-eye"></i></a>
-                            <a href="#" title="Baixar"><i class="fa-solid fa-download"></i></a>
-                        </td>
+                        <td colspan="4" class="table-message">Carregando análises...</td>
                     </tr>
                 </tbody>
             </table>
@@ -117,5 +92,8 @@
     </main>
 
     <footer></footer>
+
+    <script type="module" src="../ts/pages/historico.ts"></script>
 </body>
+
 </html>
