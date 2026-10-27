@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../static/css/base.css">
     <link rel="stylesheet" href="../static/css/formulario.css">
     <title>Novo Diagnóstico | GeoProcessamento</title>
@@ -52,6 +56,12 @@
                     <span>Sobre</span>
                 </a>
             </li>
+            <li>
+                <a href="teste.html">
+                    <i class="fa-solid fa-flask"></i>
+                    <span>Teste</span>
+                </a>
+            </li>
         </ul>
     </nav>
     <main>
@@ -68,22 +78,22 @@
                 <input type="text" id="cidade" placeholder="Digite a didade">
 
                 <label for="area">Area Geográfica</label>
-                <input type="text" id="area" placeholder="Digite o Nome da area">
+                <input type="text" id="area" placeholder="Digite o Nome da area" required>
 
-                <label for="imagen">Imagem</label>
-                <input type="file" id="imagem" accept="image/*">
+                <label for="imagem">Imagem (GeoTIFF com bandas R, G, B, NIR)</label>
+                <input type="file" id="imagem" accept=".tif,.tiff" required>
 
 
                 <div class="localizacao">
                     <div class="">
                         <label for="latitude">Latitude</label>
-                        <input type="number" class="cordernadas" id="latitude">
+                        <input type="number" class="cordernadas" id="latitude" step="any" min="-90" max="90">
 
                     </div>
 
                     <div class="">
                         <label for="longitude">Longitude</label>
-                        <input type="number" id="longitude" class="cordernadas">
+                        <input type="number" id="longitude" class="cordernadas" step="any" min="-180" max="180">
                     </div>
                 </div>
 
@@ -110,8 +120,8 @@
 
                 <div class="modal-body">
 
-                    <div class="preview-imagem">
-                        <img id="previewImagem" src="" alt="Imagem selecionada">
+                    <div class="preview-imagem" id="previewImagem">
+                        <span id="previewNome" class="preview-nome"></span>
                     </div>
 
                     <div class="dados-confirmacao">
@@ -157,6 +167,8 @@
 
                     </div>
 
+                    <p class="modal-erro" id="modalErro" hidden></p>
+
                 </div>
 
                 <div class="modal-footer">
@@ -176,6 +188,6 @@
         </div>
     </main>
 
-    <script src="../static/js/formulario.js"></script>
+    <script type="module" src="../ts/pages/formulario.ts"></script>
 </body>
 </html>

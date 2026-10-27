@@ -131,6 +131,26 @@ python G-criar_mosaico_vrt.py
 
 ---
 
+## Interface web (frontend)
+
+O frontend fica em `frontend/` (HTML + TypeScript + axios, servido pelo Vite). Em desenvolvimento, as chamadas para `/api/...` são repassadas pelo Vite para a API FastAPI em `http://localhost:8000`, sem precisar configurar CORS.
+
+```bash
+uvicorn erosion.api.main:app --port 8000
+```
+
+```bash
+npm --prefix frontend install
+```
+
+```bash
+npm --prefix frontend run dev
+```
+
+Acesse `http://localhost:5173/templates/index.html`. A seção **Teste** do menu tem um card para cada endpoint da API, mostrando o status HTTP e o JSON da resposta. Para usar outra API, defina `API_TARGET` (alvo do proxy) ao rodar o Vite, ou `VITE_API_URL` para chamar a API diretamente (nesse caso a API precisa liberar CORS).
+
+---
+
 ## Classes do Modelo
 
 | Código | Classe | Valor C (RUSLE) | Descrição |

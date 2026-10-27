@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+.result-message {
+    margin: -8px 0 20px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.result-message.erro {
+    color: #a12b20;
+}
+
+.result-message[hidden] {
+    display: none;
+}
+
 .results-layout {
     display: grid;
     grid-template-columns: 1.6fr 1fr;
